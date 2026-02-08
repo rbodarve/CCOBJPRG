@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [About The Project](#about-the-project)
 - [Course Topics](#course-topics)
@@ -22,7 +22,7 @@
 
 ---
 
-## 🎯 About The Project
+## About The Project
 
 This repository contains practical exercises and projects completed for the **CCOBJPRG (Object-Oriented Programming)** course. Each exercise demonstrates fundamental and advanced concepts of object-oriented programming using Java, including encapsulation, inheritance, polymorphism, abstraction, and GUI development.
 
@@ -30,7 +30,7 @@ The projects range from basic OOP implementations to complex GUI applications, s
 
 ---
 
-## 📚 Course Topics
+## Course Topics
 
 This repository covers the following core OOP concepts:
 
@@ -45,7 +45,7 @@ This repository covers the following core OOP concepts:
 
 ---
 
-## 📂 Weekly Exercises
+## Weekly Exercises
 
 ### Week 3: Public Transportation Fare Calculator
 - **File:** `LRTMRT.java`
@@ -79,7 +79,7 @@ This repository covers the following core OOP concepts:
 
 ---
 
-## 🛠 Built With
+## Built With
 
 - **Java** - Primary programming language
 - **Java Swing** - GUI framework for desktop applications
@@ -87,7 +87,7 @@ This repository covers the following core OOP concepts:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to get the project running on your local machine.
 
@@ -146,7 +146,7 @@ For GUI applications (LRTMRT.java, finalSwingLRT.java), a window will appear upo
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CCOBJPRG/
@@ -170,7 +170,7 @@ CCOBJPRG/
 
 ---
 
-## 💡 Key Concepts Covered
+## Key Concepts Covered
 
 ### Encapsulation
 - Private fields with public getter/setter methods
@@ -198,7 +198,7 @@ CCOBJPRG/
 
 ---
 
-## 📞 Contact
+## Contact
 
 **Repository Owner:** rbodarve
 
@@ -206,7 +206,15 @@ CCOBJPRG/
 
 ---
 
+---
+
+## Acknowledgments
+
+README template inspired by [Best-README-Template](https://github.com/othneildrew/Best-README-Template) by [@othneildrew](https://github.com/othneildrew)
+
+---
+
 <div align="center">
-  <p>⭐ If you find this repository helpful, please consider giving it a star!</p>
-  <p>Made with ❤️ for learning Object-Oriented Programming</p>
+  <p>If you find this repository helpful, please consider giving it a star!</p>
+  <p>Made for learning Object-Oriented Programming</p>
 </div>
