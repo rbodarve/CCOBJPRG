@@ -2,14 +2,28 @@
 class Person {
     private String name;
     private int age;
+    
+    public Person() {
+    }
+    
+    public Person(String name, int age) {
+        setName(name);
+        setAge(age);
+    }
  
     public void setName(String newName) {
-        name = newName;
+        if (newName != null && !newName.trim().isEmpty()) {
+            name = newName;
+        } else {
+            System.out.println("Error: Name cannot be null or empty.");
+        }
     }
  
     public void setAge(int newAge) {
-        if (newAge >= 0) {
+        if (newAge >= 0 && newAge <= 150) {
             age = newAge;
+        } else {
+            System.out.println("Error: Age must be between 0 and 150.");
         }
     }
  

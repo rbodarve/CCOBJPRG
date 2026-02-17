@@ -1,11 +1,20 @@
 import javax.swing.JOptionPane;
 
-public class finalSwingLRT {
+public class FinalSwingLRT {
     
     private static Object[] transit = {"LRT 1", "LRT 2", "MRT 3"};
     private static Object[] pay = {"Regular Card", "Beep Card"};
-    private static Object[] discount = {"Regular Passenger (10%)", "Student (15%)", "3-PWD (20%))"};
-    private static Object[] options = {"Change Station", "Ride Again ", "Get Off"};
+    
+    // Status constants for passenger type
+    private static final int STATUS_REGULAR = 1;
+    private static final int STATUS_STUDENT = 2;
+    private static final int STATUS_PWD = 3;
+    
+    // Card constants for payment method
+    private static final int CARD_REGULAR = 1;
+    private static final int CARD_BEEP = 2;
+    private static Object[] discount = {"Regular Passenger (10%)", "Student (15%)", "3-PWD (20%)"};
+    private static Object[] options = {"Change Station", "Ride Again", "Get Off"};
     private static Object[] options2 = {"Ride Again", "Get Off"};
     
     private static int[][] LRT1Fares = {
@@ -67,7 +76,7 @@ public class finalSwingLRT {
             "UN Ave.", "Central", "Carriedo", "Doroteo Jose  (Connecting LRT 2)", "Bambang", "Tayuman", "Blumentritt",
             "Abad Santos", "R. Papa", "5th Avenue", "Monumento", "Balintawak", "Roosevelt"};    
     private static String[] station2 = {"Recto (Connecting LRT 1)", "Legarda", "Pureza", "V. Mapa", "J. Ruiz", "Gilmore", "Betty Go-Belmonte",
-            "Araneta - Cubao (Connecting MRT 3)", "Anonas", "Katipunan", "Santolan"};    
+            "Araneta - Cubao (Connecting MRT 3)", "Anonas", "Katipunan", "Santolan", "Marikina", "Antipolo"};    
     private static String[] station3 = {"North Ave", "Quezon Ave", "Kamuning", "Cubao (Connecting LRT 2)", "Santolan", "Ortigas", "Shaw",
             "Boni", "Guadalupe", "Buendia", "Ayala", "Magallanes", "Taft (Connecting LRT 1)"};
     
@@ -100,7 +109,7 @@ public class finalSwingLRT {
                 null,
                 station1,
                 null);
-            if(lrtStart.equals(-1)||lrtStart.equals(1))
+            if(lrtStart == null)
                 handleInvalidInput(); 
             for(temp = 0; temp < station1.length; temp++) {
                 if(lrtStart.equals(station1[temp])){
@@ -127,7 +136,7 @@ public class finalSwingLRT {
             null,
             tempLRT,
             null);
-        if(lrtEnd.equals(-1)||lrtEnd.equals(1))
+        if(lrtEnd == null)
             handleInvalidInput(); 
         for(temp = 0; temp < station1.length; temp++) {
             if(lrtEnd.equals(station1[temp])){
@@ -143,17 +152,14 @@ public class finalSwingLRT {
         }
         else {
             pricy = LRT1Fares[initial][finale]; 
-            if(status == 1 && card == 2) { 
-                pricy = pricy - (pricy *.10); 
-                pricy = pricy - (pricy *.10);  
+            if(status == STATUS_REGULAR && card == CARD_BEEP) { 
+                pricy = pricy * 0.90;
             }
-            if(status == 2 && card == 2) { 
-                pricy = pricy - (pricy *.15); 
-                pricy = pricy - (pricy *.15);  
+            if(status == STATUS_STUDENT && card == CARD_BEEP) { 
+                pricy = pricy * 0.85;
             }
-            if(status == 3 && card == 2) { 
-                pricy = pricy - (pricy *.20);  
-                pricy = pricy - (pricy *.20); 
+            if(status == STATUS_PWD && card == CARD_BEEP) { 
+                pricy = pricy * 0.80;
             }
             payment += pricy;
             transfer = 0;
@@ -226,7 +232,7 @@ public class finalSwingLRT {
                 null,
                 station2,
                 null);
-            if(lrtStart.equals(-1)||lrtStart.equals(1))
+            if(lrtStart == null)
                 handleInvalidInput(); 
             for(temp = 0; temp < station2.length; temp++) {
                 if(lrtStart.equals(station2[temp])){
@@ -253,7 +259,7 @@ public class finalSwingLRT {
             null,
             tempLRT,
             null);
-        if(lrtEnd.equals(-1)||lrtEnd.equals(1))
+        if(lrtEnd == null)
             handleInvalidInput(); 
         for(temp = 0; temp < station2.length; temp++) {
             if(lrtEnd.equals(station2[temp])){
@@ -269,17 +275,14 @@ public class finalSwingLRT {
         }
         else {
             pricy = LRT2Fares[initial][finale]; 
-            if(status == 1 && card == 2) { 
-                pricy = pricy - (pricy *.10); 
-                pricy = pricy - (pricy *.10);  
+            if(status == STATUS_REGULAR && card == CARD_BEEP) { 
+                pricy = pricy * 0.90;
             }
-            if(status == 2 && card == 2) { 
-                pricy = pricy - (pricy *.15); 
-                pricy = pricy - (pricy *.15);  
+            if(status == STATUS_STUDENT && card == CARD_BEEP) { 
+                pricy = pricy * 0.85;
             }
-            if(status == 3 && card == 2) { 
-                pricy = pricy - (pricy *.20);  
-                pricy = pricy - (pricy *.20); 
+            if(status == STATUS_PWD && card == CARD_BEEP) { 
+                pricy = pricy * 0.80;
             }
             payment += pricy;
             transfer = 0;
@@ -352,7 +355,7 @@ public class finalSwingLRT {
                 null,
                 station3,
                 null);
-            if(lrtStart.equals(-1)||lrtStart.equals(1))
+            if(lrtStart == null)
                 handleInvalidInput(); 
             for(temp = 0; temp < station3.length; temp++) {
                 if(lrtStart.equals(station3[temp])){
@@ -379,7 +382,7 @@ public class finalSwingLRT {
             null,
             tempLRT,
             null);
-        if(lrtEnd.equals(-1)||lrtEnd.equals(1))
+        if(lrtEnd == null)
             handleInvalidInput();        
         for(temp = 0; temp < station3.length; temp++) {
             if(lrtEnd.equals(station3[temp])){
@@ -395,17 +398,14 @@ public class finalSwingLRT {
         }
         else {
             pricy = MRT3Fares[initial][finale];
-            if(status == 1 && card == 2) { 
-                pricy = pricy - (pricy *.10); 
-                pricy = pricy - (pricy *.10); 
+            if(status == STATUS_REGULAR && card == CARD_BEEP) { 
+                pricy = pricy * 0.90;
             }
-            if(status == 2 && card == 2) { 
-                pricy = pricy - (pricy *.15); 
-                pricy = pricy - (pricy *.15); 
+            if(status == STATUS_STUDENT && card == CARD_BEEP) { 
+                pricy = pricy * 0.85;
             }
-            if(status == 3 && card == 2) { 
-                pricy = pricy - (pricy *.20);  
-                pricy = pricy - (pricy *.20);  
+            if(status == STATUS_PWD && card == CARD_BEEP) { 
+                pricy = pricy * 0.80;
             }
             payment += pricy;
             transfer = 0;
@@ -456,7 +456,7 @@ public class finalSwingLRT {
         else if(choose4==1||choose5==0) { 
             initial = finale;
             ride = 1;
-            lrt1(payment,terminal,initial,finale,card,status,ride,transfer); 
+            lrt3(payment,terminal,initial,finale,card,status,ride,transfer); 
         }
         else  
             paymentMessage(payment); 

@@ -20,14 +20,14 @@ public class LRTMRT {
                         "Katipunan", "Santolan", "Marikina-Pasig", "Antipolo"};
 
         Object[] mrt3 = {"Taft", "Magallanes", "Ayala", "Buendia", "Guadalupe", 
-                        "Boni", "Shaw Boulevard", "Ortigas", "Santola", "Cubao", 
+                        "Boni", "Shaw Boulevard", "Ortigas", "Santolan", "Cubao", 
                         "Kamuning", "Quezon Avenue", "North Avenue"};
         
-        int []fare1BC = {13,14,15,16,17,18,19,20,22,23,23,24,25,26,27,28,29,30,33,35};
-        int []fare1SJ = {15,15,20,20,20,20,20,25,25,25,25,25,30,30,30,30,30,30,35}; 
+        int []fare1BC = {13,14,15,16,17,18,19,20,22,23,23,24,25,26,27,28,29,30};
+        int []fare1SJ = {15,15,20,20,20,20,20,25,25,25,25,25,30,30,30,30,30,30}; 
         int []fare2BC = {13,15,16,18,19,21,22,23,25,26,28,31,33};
-        int []fare2SJ = {15,20,20,20,25,25,25,25,30,30,35,35};
-        int []fare3 = {13,13,16,16,20,20,20,24,24,24,28,28};
+        int []fare2SJ = {15,20,20,20,25,25,25,25,30,30,35,35,35};
+        int []fare3 = {13,13,16,16,20,20,20,24,24,24,28,28,28};
                 
         int transfer = 0;
         int choose1;
@@ -92,12 +92,12 @@ public class LRTMRT {
                         case 0 -> {
                             totalfare = totalfare + fare1BC[stationDiff];
                             JOptionPane.showMessageDialog(frame,
-                                "You're total fare is " + totalfare + " pesos.");
+                                "Your total fare is " + totalfare + " pesos.");
                         }
                         case 1 -> {
                             totalfare = totalfare + fare1SJ[stationDiff];
                             JOptionPane.showMessageDialog(frame,
-                                "You're total fare is " + totalfare + " pesos.");
+                                "Your total fare is " + totalfare + " pesos.");
                         } 
                     }
                     if(num2==1 || num2==10){
@@ -110,9 +110,6 @@ public class LRTMRT {
                             options,
                             null);
                     }
-             //       else if(){
-                        
-             //       }
                 }
                 case 1 -> {
                     String lrt2Start = (String)JOptionPane.showInputDialog(
@@ -146,12 +143,12 @@ public class LRTMRT {
                         case 0 -> {
                             totalfare = totalfare + fare2BC[stationDiff];
                             JOptionPane.showMessageDialog(frame,
-                                "You're total fare is " + totalfare + " pesos.");
+                                "Your total fare is " + totalfare + " pesos.");
                         }
                         case 1 -> {
                             totalfare = totalfare + fare2SJ[stationDiff];
                             JOptionPane.showMessageDialog(frame,
-                                "You're total fare is " + totalfare + " pesos.");
+                                "Your total fare is " + totalfare + " pesos.");
                         } 
                     }
                     if(num2==0 || num2==7){
@@ -197,12 +194,12 @@ public class LRTMRT {
                         case 0 -> {
                             totalfare = totalfare + fare3[stationDiff];
                             JOptionPane.showMessageDialog(frame,
-                                "You're total fare is " + totalfare + " pesos.");
+                                "Your total fare is " + totalfare + " pesos.");
                         }
                         case 1 -> {
                             totalfare = totalfare + fare3[stationDiff];
                             JOptionPane.showMessageDialog(frame,
-                                "You're total fare is " + totalfare + " pesos.");
+                                "Your total fare is " + totalfare + " pesos.");
                         } 
                     }
                     if(num2==0 || num2==9){

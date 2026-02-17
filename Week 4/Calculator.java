@@ -93,9 +93,9 @@ public class Calculator extends JFrame {
         }
         //calculation with a try catch for no input
         try {
-            int a = Integer.parseInt(input1.getText());
-            int b = Integer.parseInt(input2.getText());
-            int ans = 0;
+            double a = Double.parseDouble(input1.getText());
+            double b = Double.parseDouble(input2.getText());
+            double ans = 0;
             if (addition.isSelected()) {
                 ans = a + b;
             } else if (multiplication.isSelected()) {
@@ -112,7 +112,7 @@ public class Calculator extends JFrame {
             }
             showMessage("The Answer is: " + ans, "Answer:", JOptionPane.INFORMATION_MESSAGE);
         } catch (NumberFormatException e) {
-            showMessage("Please Input an Integer", "Error", JOptionPane.ERROR_MESSAGE);
+            showMessage("Please Input a Number", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
     //encapsulation of choosing the operations

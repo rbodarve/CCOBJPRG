@@ -1,18 +1,22 @@
-public class familyTree {
+public class FamilyTree {
     
     static class Person {
-        String name;
+        private String name;
 
         public Person(String name) {
             this.name = name;
         }
+        
+        public String getName() {
+            return name;
+        }
 
         public void introduce() {
-            System.out.println("Hi, I'm " + name);
+            System.out.println("Hi, I'm " + getName());
         }
 
         public void interact() {
-            System.out.println(name + " interacts.");
+            System.out.println(getName() + " interacts.");
         }
     }
 
@@ -23,7 +27,7 @@ public class familyTree {
 
         @Override
         public void interact() {
-            System.out.println(name + " tells a story.");
+            System.out.println(getName() + " tells a story.");
         }
     }
 
@@ -34,7 +38,7 @@ public class familyTree {
 
         @Override
         public void interact() {
-            System.out.println(name + " says: Hello!");
+            System.out.println(getName() + " says: Hello!");
         }
     }
 
@@ -45,7 +49,7 @@ public class familyTree {
 
         @Override
         public void interact() {
-            System.out.println(name + " is playing.");
+            System.out.println(getName() + " is playing.");
         }
     }
 

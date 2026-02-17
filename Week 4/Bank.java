@@ -1,4 +1,4 @@
-// Main.java
+// Bank.java
 public class Bank {
     public static void main(String[] args) {
     // Create a new bank account
