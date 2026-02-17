@@ -6,13 +6,12 @@ public class FinalSwingLRT {
     private static Object[] pay = {"Regular Card", "Beep Card"};
     
     // Status constants for passenger type
-    private static final int STATUS_REGULAR = 1;
-    private static final int STATUS_STUDENT = 2;
-    private static final int STATUS_PWD = 3;
+    private static final int STATUS_REGULAR = 0;
+    private static final int STATUS_STUDENT = 1;
+    private static final int STATUS_PWD = 2;
     
-    // Card constants for payment method
-    private static final int CARD_REGULAR = 1;
-    private static final int CARD_BEEP = 2;
+    // Card constants for payment method (from dialog return values)
+    private static final int CARD_BEEP = 1;
     private static Object[] discount = {"Regular Passenger (10%)", "Student (15%)", "3-PWD (20%)"};
     private static Object[] options = {"Change Station", "Ride Again", "Get Off"};
     private static Object[] options2 = {"Ride Again", "Get Off"};
@@ -488,7 +487,7 @@ public class FinalSwingLRT {
         if(card==-1)
             handleInvalidInput();
         int status = 0;
-        if(card == 1){
+        if(card == CARD_BEEP){
             status = JOptionPane.showOptionDialog(null,
                 "Terminal Station (Regular Passenger (10%) | Student (15%) | PWD (20%))",
                 "Discount",
