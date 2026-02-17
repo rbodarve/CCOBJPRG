@@ -83,7 +83,7 @@ This repository covers the following core OOP concepts:
 
 - **Java** - Primary programming language
 - **Java Swing** - GUI framework for desktop applications
-- **JDK 8+** - Java Development Kit
+- **OpenJDK 21.0.10** - Java Development Kit
 
 ---
 
