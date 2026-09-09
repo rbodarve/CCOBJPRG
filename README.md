@@ -63,17 +63,17 @@ This repository covers the following core OOP concepts:
 - **Concepts:** Inheritance, superclass/subclass relationships, method overriding
 
 ### Week 6: Family Tree
-- **File:** `familyTree.java`
+- **File:** `FamilyTree.java`
 - **Description:** Hierarchical relationship modeling
 - **Concepts:** Object relationships, inheritance hierarchies
 
 ### Week 7: OOP Principles
-- **Files:** `Abstraction.java`, `employeeCompany.java`
+- **Files:** `Abstraction.java`, `EmployeeCompany.java`
 - **Description:** Comprehensive demonstration of core OOP principles
 - **Concepts:** Encapsulation, polymorphism, abstraction, interfaces
 
 ### Week 14: Final Project
-- **File:** `finalSwingLRT.java`
+- **File:** `FinalSwingLRT.java`
 - **Description:** Enhanced LRT/MRT fare calculator with advanced features
 - **Concepts:** Advanced GUI design, event handling, comprehensive OOP implementation
 
@@ -142,7 +142,7 @@ javac LRTMRT.java
 java LRTMRT
 ```
 
-For GUI applications (LRTMRT.java, finalSwingLRT.java), a window will appear upon execution.
+For GUI applications (LRTMRT.java, FinalSwingLRT.java), a window will appear upon execution.
 
 ---
 
@@ -160,12 +160,12 @@ CCOBJPRG/
 ├── Week 5/
 │   └── empInherit.java
 ├── Week 6/
-│   └── familyTree.java
+│   └── FamilyTree.java
 ├── Week 7/
 │   ├── Abstraction.java
-│   └── employeeCompany.java
+│   └── EmployeeCompany.java
 └── Week 14/
-    └── finalSwingLRT.java
+    └── FinalSwingLRT.java
 ```
 
 ---
